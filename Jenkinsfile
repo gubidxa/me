@@ -14,7 +14,6 @@ pipeline {
     stage('Test') {
       steps {
         sh 'npm test'
-        emailext(subject: 'Aprobar', body: 'Por favor aprueba', to: 'gabo', attachLog: true)
       }
     }
     stage('Approve') {
